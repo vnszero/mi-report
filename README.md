@@ -28,3 +28,6 @@ sudo apt install texlive-bibtex-extra biber
 ```
 
 # restart VSCode
+
+## to build via terminal
+latexmk -pdf -pvc relatorio.tex
