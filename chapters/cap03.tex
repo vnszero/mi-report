@@ -1,5 +1,60 @@
 \chapter{Metodologia}\label{cap:metodology}
 
-Neste capítulo espera-se uma descrição detalhada do problema e da proposta de solução. 
+Neste capítulo descreve-se a metodologia seguida no desenrolar do projeto, apresentando as etapas, técnicas e ferramentas que suportaram a construção da solução. Por se tratar de um produto, a metodologia adotada centra-se nos processos de análise, implementação e validação do sistema através de práticas consolidadas da engenharia de software.
 
-No caso de projetos de desenvolvimento de software, deverá deitar-se mão dos conceitos e ferramentas de Análise/Modelação estudadas durante o curso (por exemplo, diagramas UML ou outra linguagem gráfica). Deve-se indicar explicitamente as tarefas a desempenhar pelo sistema, e os atores que interagem com o mesmo. A descrição deve ter suficiente detalhes  para perceber as dificuldades associadas à resolução do problema.
+\section{Ponto de Partida}
+
+Este presente trabalho dá sequência aos esforços da dissertação Desenvolvimento de uma plataforma de Gestão da Construção por Luiz Oliveira \cite{Oliveira2024}. Portanto, uma parte do sistema já havia sido modelado e implementado. Haviam 4 grupos com 18 ferramentas já estabelecidas: Equipamentos & Serviços, Obras, Outros Custos e Recursos Humanos. O primeiro conjunto trazia 2 ferramentas: \textbf{Material} e \textbf{Consumível/Serviço} como pode ser visto na Figura \ref{2024-equipamentos-e-servicos}. Já o grupo Obras era composto pelas 8 páginas: \textbf{Obra}, \textbf{Execução Orçamental}, \textbf{Presenças}, \textbf{Preço Materiais}, \textbf{Materiais por Obra}, \textbf{Fatura Material}, \textbf{Pedido Cotação} e \textbf{Fatura Cliente}, como pode ser observado na Figura \ref{2024-obras}. 
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.4\textwidth]{images/2024-equipamentos-e-servicos.jpeg} 
+    \caption{Equipamentos & Serviços - Ponto de Partida} 
+    \label{2024-equipamentos-e-servicos}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.4\textwidth]{images/2024-obras.jpeg} 
+    \caption{Obras - Ponto de Partida} 
+    \label{2024-obras}
+\end{figure}
+
+Em sequência, o grupo Outros Custos trazia 7 ferramentas: \textbf{IUC}, \textbf{Inspeção Periódica}, \textbf{Leasing Viaturas}, \textbf{Inspeção Periódica}, \textbf{Seguro Automóvel}, \textbf{Seguro Trabalho} e \textbf{Consumíveis e Serviços}, veja Figura \ref{2024-outros-custos}. Por fim, Recursos Humanos trazia apenas 1 página: \textbf{Colaboradores}, ver Figura \ref{2024-recursos-humanos}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.4\textwidth]{images/2024-outros-custos.jpeg} 
+    \caption{Outros Custos - Ponto de Partida} 
+    \label{2024-outros-custos}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.4\textwidth]{images/2024-recursos-humanos.jpeg} 
+    \caption{Recursos Humanos - Ponto de Partida} 
+    \label{2024-recursos-humanos}
+\end{figure}
+
+Por um lado, ter um ponto inicial indicava o norte do que deveria ser a implementação das outras páginas que viriam no futuro e já estabelecia a arquitetura do projeto de \textit{frontend} à \textit{backend}. Por outro lado, isso também representava herdar as fragilidades da estrutura que já estava estabelecida e, embora já tivessem um código inicial, isso não traduzia em ferramentas prontas para uso. Somado a isso, para início dos testes junto ao cliente e cobertura de todos os casos mínimos de uso, era necessário incluir outras 17 ferramentas ainda não listadas. O primeiro passo era identificar de bugs e resolver problemas daquilo que supostamente estava pronto. Depois completar ferramentas em falta para só depois arrancar com os trabalhos sobre os novos módulos de \gls{BI}.
+
+\section{Análise de Requisitos}
+
+Em reunião com o cliente, foi possível estabelecer os requisitos funcionais dos novos módulos e traçar quais são os dados realmente relevantes para a tomada de decisão por parte dos gestores. Em linhas gerais, o novo módulo precisa ser um \textit{dashboard} que reune as principais informações do negócio e permita ao gestor compreender o contexto geral em uma única tela. Em aspecto global existem: obras ativas por ano, obras com maior consumo de materiais, \textit{ranking} de materiais mais utilizados e \textit{ranking} de fornecedores mais recorrentes. Já no contexto específico de determinada obras tem-se: tempo de extrapolação do previsto e comparação entre orçamento e custo real. Por outra frente, também viu-se necessário criação de uma nova ferramenta que permita gerir capítulos por obras de forma a fatiar o orçamento e os tempos previsto e real.
+
+\section{Mockups}
+
+Após a análise de requisitos, procedeu-se à criação de mockups de interface para validar o fluxo de interação e a organização visual da interface. Ferramentas de prototipagem como \textit{Figma} foram utilizadas para construir protótipos de baixa e média fidelidade.
+
+Os mockups permitiram antecipar problemas de usabilidade, ajustar elementos de navegação e garantir que a solução final esteja dentro das expectativas. Estas representações também serviram como referência para a implementação em fases subsequentes.
+
+\section{Arquitetura Adotada}
+
+A arquitetura do sistema tem no \textit{backend} linguagem C# em \textit{framework} \textit{DotNet} com \textit{Core Entity} para interface com banco de dados relacional \textit{MySQL}. Já no \textit{frontend}, está linguagem TypeScript em \textit{framework} \textit{React} e \textit{Ant Design}. Essa escolha favoreceu o desenvolvimento do \textit{backend} por aproveitar boa parte da estrutura legada da solução antiga de 2013.
+
+\section{Metodologia Ágil de Desenvolvimento}
+
+A metodologia de trabalho adotada se alinha com abordagem ágil com utilização de Kanban e ciclos iterativos quinzenais de tarefas. Essa escolha de trabalho permitiu gerir os esforços de forma incremental, priorizar funcionalidades mais importantes e garantir adaptações rápidas a novos requisitos \cite{Valente2020}. Foram definidas 85 tarefas no \textit{Projects} do \textit{GitHub} que cobrem novas funcionalidades, melhorias, correções e refatoração de código de todas as frentes de operação do \textit{software}. 
+
+\section{Validação}
+A validação do produto ocorreu de duas formas ao longo do projeto. Na primeira fase, as validações eram feitas junto com o professor orientador em reuniões quinzenais. Após atingir maturidade suficiente para testes em produção, a validação passou a ocorrer de forma contínua junto ao cliente, com testes de disponibilidade e funcionalidades ao longo das semanas. A verificação das novas telas e recursos se faziam em comparação com o sistema legado de forma a alinhar com os modos de operação esperados. Esse contato próximo com o \textit{stakeholder} permitiu localizar problemas de forma mais rápida e sanar dúvidas relacionadas com as regras de negócio inerentes da atividade profissional da construção civil e administrativa. 
