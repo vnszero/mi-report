@@ -1,10 +1,10 @@
 \chapter{Metodologia}\label{cap:metodology}
 
-Neste capítulo, descreve-se a metodologia seguida no decorrer do projeto, apresentando as etapas, técnicas e ferramentas que sustentaram a construção da solução. Por se tratar do desenvolvimento de um produto, a metodologia adotada centra-se nos processos de análise, implementação e validação do sistema, baseando-se em práticas consolidadas da engenharia de software.
+Neste capítulo, descreve-se a metodologia seguida no decorrer do projeto, apresentando as etapas, técnicas e ferramentas que sustentaram a construção da solução. Por se tratar do desenvolvimento de um software, a metodologia adotada centra-se nos processos de análise, implementação e validação do sistema, baseando-se em práticas consolidadas da engenharia de software.
 
 \section{Ponto de Partida}
 
-O presente trabalho dá continuidade aos esforços da dissertação \textit{Desenvolvimento de uma Plataforma de Gestão da Construção}, de Luiz Oliveira \cite{Oliveira2024}. Assim, parte do sistema já se encontrava modelada e implementada. Havia 4 grupos com 18 ferramentas estabelecidas: Equipamentos & Serviços, Obras, Outros Custos e Recursos Humanos. O primeiro grupo continha 2 ferramentas: \textbf{Material} e \textbf{Consumível/Serviço}, conforme ilustrado na Figura \ref{2024-equipamentos-e-servicos}. Já o grupo Obras era composto por 8 páginas: \textbf{Obra}, \textbf{Execução Orçamental}, \textbf{Presenças}, \textbf{Preço Materiais}, \textbf{Materiais por Obra}, \textbf{Fatura Material}, \textbf{Pedido Cotação} e \textbf{Fatura Cliente}, conforme apresentado na Figura \ref{2024-obras}.
+O presente trabalho dá continuidade aos esforços da dissertação \textit{Desenvolvimento de uma Plataforma de Gestão da Construção}, de Luiz Oliveira \cite{Oliveira2024}. Assim, parte do sistema já se encontrava modelada e implementada. Havia 4 grupos com 18 ferramentas estabelecidas: Equipamentos \& Serviços, Obras, Outros Custos e Recursos Humanos. O primeiro grupo continha 2 ferramentas: \textbf{Material} e \textbf{Consumível/Serviço}, conforme ilustrado na Figura \ref{2024-equipamentos-e-servicos}. Já o grupo Obras era composto por 8 páginas: \textbf{Obra}, \textbf{Execução Orçamental}, \textbf{Presenças}, \textbf{Preço Materiais}, \textbf{Materiais por Obra}, \textbf{Fatura Material}, \textbf{Pedido Cotação} e \textbf{Fatura Cliente}, conforme apresentado na Figura \ref{2024-obras}.
 
 \begin{figure}[H]
     \centering
@@ -44,7 +44,7 @@ Em reunião com o cliente, foi possível estabelecer os requisitos funcionais do
 
 \section{Mockups}
 
-Após a análise de requisitos, procedeu-se à criação de \textit{mockups} de interface para validar o fluxo de interação e a organização visual. Ferramentas de prototipagem, como o \textit{Figma}, foram utilizadas para construir protótipos de baixa e média fidelidade. A Figura \ref{mockup-indicadores-globais} traz a modelagem da página de Indicadores Globais. Nela, o usuário é capaz de filtrar por um intervalor de datas e assim obter informações sobre obras ativas nesse período de tempo, total de obras finalizadas até aquela data final, clientes com mais obras e total de obras naquele cliente. Além disso a ferramenta apresenta o ranking de materiais, fornecedores, clientes e obras em critério custo real.
+Após a análise de requisitos, procedeu-se à criação de \textit{mockups} de interface para validar o fluxo de interação e a organização visual. Ferramentas de prototipagem, como o \textit{Figma}, foram utilizadas para construir protótipos de baixa e média fidelidade. A Figura \ref{mockup-indicadores-globais} traz a modelagem da página de Indicadores Globais. Nela, o usuário é capaz de filtrar por um intervalo de datas e assim obter informações sobre obras ativas nesse período de tempo, total de obras finalizadas até aquela data final, clientes com mais obras e total de obras naquele cliente. Além disso, a ferramenta apresenta o ranking de materiais, fornecedores, clientes e obras em critério custo real.
 
 \begin{figure}[H]
     \centering
@@ -53,7 +53,7 @@ Após a análise de requisitos, procedeu-se à criação de \textit{mockups} de 
     \label{mockup-indicadores-globais}
 \end{figure}
 
-O próximo \textit{mockup}, conforme Figura \ref{mockup-indicadores-especificos}, exibe que os indicadores específicos permitem ao usuário escolher intervalo de datas, obra e um capítulo determinado. Assim, é possível compreender extrapolações temporais em relação as datas de início e fim daquela obra, bem como os custos de mão de obra, materiais e totais.
+O próximo \textit{mockup}, conforme Figura \ref{mockup-indicadores-especificos}, exibe que os indicadores específicos permitem ao usuário escolher intervalo de datas, obra e um capítulo determinado. Assim, é possível compreender extrapolações temporais em relação às datas de início e fim daquela obra, bem como os custos de mão de obra, materiais e totais.
 
 \begin{figure}[H]
     \centering
@@ -66,7 +66,7 @@ Os \textit{mockups} permitiram antecipar problemas de usabilidade, ajustar eleme
 
 \section{Arquitetura Adotada}
 
-A arquitetura do sistema utiliza, no \textit{backend}, a linguagem C\# com o \textit{framework} \textit{.NET}, empregando o \textit{Entity Core} para interação com o banco de dados relacional \textit{MySQL}. No \textit{frontend}, utilizou-se a linguagem TypeScript com o \textit{framework} \textit{React} e a biblioteca \textit{Ant Design}. Essa escolha favoreceu o desenvolvimento, possibilitando o reaproveitamento significativo da estrutura legada da solução anterior, originalmente desenvolvida em 2013.
+A arquitetura do sistema utiliza, no \textit{backend}, a linguagem C\# com o \textit{framework} \textit{.NET}, empregando o \textit{Entity Framework Core} para interação com o banco de dados relacional \textit{MySQL}. No \textit{frontend}, utilizou-se a linguagem TypeScript com o \textit{framework} \textit{React} e a biblioteca \textit{Ant Design}. Essa escolha favoreceu o desenvolvimento, possibilitando o reaproveitamento significativo da estrutura legada da solução anterior, originalmente desenvolvida em 2013.
 
 \section{Metodologia Ágil de Desenvolvimento}
 

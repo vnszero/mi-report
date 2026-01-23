@@ -1,6 +1,6 @@
 \chapter{Implementação}\label{cap:development}
 
-As 85 tarefas mencionadas anteriormente distribuíram-se em 78 tarefas destinadas a melhorias, correções, refatoração de código e disponibilização de páginas já modeladas, porém ainda indisponíveis, e 7 tarefas relacionadas a novas funcionalidades de \gls{BI}.
+As 85 tarefas mencionadas anteriormente distribuíram-se em 78 tarefas destinadas a melhorias, a correções, a refatoração de código e a disponibilização de páginas já modeladas, porém ainda indisponíveis, e 7 tarefas relacionadas a novas funcionalidades de \gls{BI}.
 
 \section{Contexto}
 
@@ -14,7 +14,7 @@ Além disso, existiam grupos inteiros sem qualquer implementação prévia: \tex
 
 As etapas seguintes incluíram a correção do gerador de PDF para a folha de presenças. A biblioteca anteriormente utilizada, \textit{QuestPDF}, apresentava falhas, motivo pelo qual foi substituída pela \textit{iText7}. Como as bibliotecas não eram compatíveis, todo o relatório precisou ser reescrito, o que exigiu refatoração completa do mecanismo de geração de documentos.
 
-Ainda na página de presenças, o mecanismo de replicação apresentava comportamento inadequado em razão do tratamento de datas em \textit{JavaScript}. Para eliminar inconsistências, adotou-se a biblioteca \textit{DayJS}. Além disso, devido à modelagem original da base de dados e às regras de negócio, o sistema de registro de presenças necessitou revisão. O modelo antigo distinguia presença e falta com valores numéricos e a letra “F”, mas não representava presenças parciais. O novo modelo passou a utilizar: \textbf{n} para presença regular, \textbf{0} para falta e \textbf{-n} para presenças parciais.
+Ainda na página de presenças, o mecanismo de replicação apresentava comportamento inadequado em razão do tratamento de datas em \textit{JavaScript}. Para eliminar inconsistências, adotou-se a biblioteca \textit{DayJS}. Além disso, devido à modelagem original da base de dados e às regras de negócio, o sistema de registro de presenças necessitou revisão. O modelo antigo distinguia presença e falta com valores numéricos e a letra “F”, mas não representava presenças parciais. O novo modelo passou a utilizar: \textbf{n} para presença regular, \textbf{0} para falta e \textbf{-n} para presença parcial.
 
 Outra correção importante envolveu os cálculos da ferramenta \textbf{Fatura Obra}, cujos subtotais eram incorretos por descumprimento da ordem adequada das operações ao considerar impostos e descontos. Também se identificou que o padrão de usabilidade dos formulários incluía uma página extra de confirmação de envio, gerando cliques desnecessários. Assim, foram criadas tarefas de ajuste para 17 das 18 ferramentas já existentes. Já na página de Inspeção Periódica, verificou-se que datas estavam registradas em formatos divergentes (por exemplo, \texttt{18/07/2011} em vez de \texttt{18-07-2011}). O sistema legado tratava datas como texto, mas o novo sistema utiliza tipos de dados de data, exigindo ajustes nos dados migrados.
 
