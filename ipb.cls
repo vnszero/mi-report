@@ -108,7 +108,8 @@
 
 %\hspace{-4cm}
 \begin{center}
-    \includegraphics[width=0.6\columnwidth, keepaspectratio]{etc/logoh.png}\\
+    \includegraphics[width=0.4\columnwidth, keepaspectratio]{etc/logoh.png}
+    \includegraphics[width=0.4\columnwidth, keepaspectratio]{etc/attract-logo.png}\\
 \end{center}
 
 
@@ -121,8 +122,10 @@
     \@author \ifdefined\@authnum \quad\@authnum \fi\\
 }}
       \vfill
-    Disserta\c{c}\~{a}o apresentada \`a Escola Superior de Tecnologia e de Gest\~{a}o de Bragan\c{c}a para obten\c{c}\~{a}o do Grau de Mestre em \@course.\\
-    
+%     Disserta\c{c}\~{a}o apresentada \`a Escola Superior de Tecnologia e de Gest\~{a}o de Bragan\c{c}a para obten\c{c}\~{a}o do Grau de Mestre em \@course.\\
+    Relatório de Bolsa de Investigação\\
+    Período do relatório: 23/07/2025 a 12/12/2025
+
     \vspace{4em}
     Trabalho orientado por:\\
     \@supervisor\\
@@ -131,7 +134,7 @@
     \fi
 	
     \vfill
-    Esta disserta\c{c}\~{a}o n\~{a}o inclui as cr\'iticas e sugest\~{o}es feitas pelo J\'uri.\\
+%     Esta disserta\c{c}\~{a}o n\~{a}o inclui as cr\'iticas e sugest\~{o}es feitas pelo J\'uri.\\
     \vspace{2em}
 	Bragança\\
 	\@courseyear
@@ -144,7 +147,8 @@
 
 %\hspace{-4cm}
 \begin{center}
-    \includegraphics[width=0.6\columnwidth, keepaspectratio]{etc/logoh.png}\\
+    \includegraphics[width=0.4\columnwidth, keepaspectratio]{etc/logoh.png}
+    \includegraphics[width=0.4\columnwidth, keepaspectratio]{etc/attract-logo.png}\\
 \end{center}
 
 
@@ -157,8 +161,10 @@
     \@author \ifdefined\@authnum \quad\@authnum \fi\\
 }}
     \vfill
-    Disserta\c{c}\~{a}o apresentada \`a Escola Superior de Tecnologia e de Gest\~{a}o de Bragan\c{c}a para obten\c{c}\~{a}o do Grau de Mestre em \@course.\\
-    
+%     Disserta\c{c}\~{a}o apresentada \`a Escola Superior de Tecnologia e de Gest\~{a}o de Bragan\c{c}a para obten\c{c}\~{a}o do Grau de Mestre em \@course.\\
+    Relatório de Bolsa de Investigação\\
+    Período do relatório: 23/07/2025 a 12/12/2025
+
 	    \vspace{4em}
 	    Trabalho orientado por:\\
 	    \@supervisor\\
@@ -167,7 +173,8 @@
     \fi
 	
     \vfill
-    Esta disserta\c{c}\~{a}o n\~{a}o inclui as cr\'iticas e sugest\~{o}es feitas pelo J\'uri.\\
+%     Esta disserta\c{c}\~{a}o n\~{a}o inclui as cr\'iticas e sugest\~{o}es feitas pelo J\'uri.\\
+    
     \vspace{2em}
 	Bragança\\
 	\@courseyear
