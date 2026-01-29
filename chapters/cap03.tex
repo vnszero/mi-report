@@ -40,11 +40,20 @@ Dispor de um ponto inicial fornecia uma direção clara para o que deveria ser a
 
 \section{Análise de Requisitos}
 
-Em reunião com o cliente, foi possível estabelecer os requisitos funcionais dos novos módulos e identificar os dados realmente relevantes para a tomada de decisão dos gestores. De forma geral, o novo módulo deveria constituir um painel que reunisse as principais informações do negócio, permitindo ao gestor compreender o panorama geral em uma única tela. No contexto global, destacaram-se: obras ativas por ano, obras com maior consumo de materiais, \textit{ranking} de materiais mais utilizados e \textit{ranking} de fornecedores mais recorrentes. No contexto específico de uma obra, consideraram-se: tempo de extrapolação do previsto e comparação entre orçamento e custo real. Identificou-se ainda a necessidade de criar uma ferramenta adicional para gerir capítulos por obra, de modo a segmentar o orçamento e os tempos previsto e real.
+Em reunião com o cliente, foi possível estabelecer os requisitos funcionais dos novos módulos e identificar os dados realmente relevantes para a tomada de decisão dos gestores. De forma geral, o novo módulo deveria constituir um painel que reunisse as principais informações do negócio, permitindo ao gestor compreender o panorama geral em uma única tela. No contexto global, destacaram-se: obras ativas por ano, obras com maior consumo de materiais, classificação de materiais mais utilizados e classificação de fornecedores mais recorrentes. No contexto específico de uma obra, consideraram-se: tempo de extrapolação do previsto e comparação entre orçamento e custo real.
+
+Identificou-se ainda a necessidade de criar 2 ferramentas adicionais: Capítulo no grupo de Parametrizações e Capítulos por Obra no grupo de Obras. A responsabilidade de definir os nomes e descrição dos possíveis capítulos enquadra-se no grupo de Parametrizações, enquanto que a responsabilidade de atribuir capítulos a obras em caráter de tempo e orçamento encaixa no grupo de Obras. A Figura \ref{diagrama-classe-capitulos} traz o diagrama de classe que ilustra o relacionamento entre esses conceitos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/diagrama-classes-capitulos.png}
+    \caption{Diagrama de Classe para Capítulos}
+    \label{diagrama-classe-capitulos}
+\end{figure}
 
 \section{Mockups}
 
-Após a análise de requisitos, procedeu-se à criação de \textit{mockups} de interface para validar o fluxo de interação e a organização visual. Ferramentas de prototipagem, como o \textit{Figma}, foram utilizadas para construir protótipos de baixa e média fidelidade. A Figura \ref{mockup-indicadores-globais} traz a modelagem da página de Indicadores Globais. Nela, o usuário é capaz de filtrar por um intervalo de datas e assim obter informações sobre obras ativas nesse período de tempo, total de obras finalizadas até aquela data final, clientes com mais obras e total de obras naquele cliente. Além disso, a ferramenta apresenta o ranking de materiais, fornecedores, clientes e obras em critério custo real.
+Após a análise de requisitos, procedeu-se à criação de \textit{mockups} de interface para validar o fluxo de interação e a organização visual. Ferramentas de prototipagem, como o \textit{Figma}, foram utilizadas para construir protótipos de baixa e média fidelidade. A Figura \ref{mockup-indicadores-globais} traz a modelagem da página de Indicadores Globais. Nela, o usuário é capaz de filtrar por um intervalo de datas e assim obter informações sobre obras ativas nesse período de tempo, total de obras finalizadas até aquela data final, clientes com mais obras e total de obras naquele cliente. Além disso, a ferramenta apresenta a classificação de materiais, fornecedores, clientes e obras em critério custo real.
 
 \begin{figure}[H]
     \centering
@@ -71,6 +80,8 @@ A arquitetura do sistema utiliza, no \textit{backend}, a linguagem C\# com o \te
 \section{Metodologia Ágil de Desenvolvimento}
 
 A metodologia de trabalho adotada baseia-se em uma abordagem ágil, utilizando Kanban e ciclos iterativos quinzenais de tarefas. Essa abordagem permitiu gerir os esforços de forma incremental, priorizar funcionalidades essenciais e garantir rápida adaptação a novos requisitos \cite{Valente2020}. Foram definidas 85 tarefas no módulo \textit{Projects} do \textit{GitHub}, abrangendo novas funcionalidades, melhorias, correções e refatorações em todas as frentes do \textit{software}.
+
+Complementarmente, o uso do Kanban possibilitou a visualização contínua do fluxo de trabalho, promovendo maior transparência, controlo do progresso e identificação precoce de gargalos no desenvolvimento. As tarefas foram organizadas em colunas representativas dos estados de execução, permitindo o acompanhamento sistemático desde a conceção até à entrega. Os ciclos iterativos quinzenais favoreceram momentos regulares de planeamento, revisão e ajuste, incentivando a melhoria contínua do processo, a validação incremental das funcionalidades implementadas e o alinhamento constante entre os objetivos técnicos e os requisitos do projeto.
 
 \section{Validação}
 
