@@ -1,6 +1,13 @@
 \chapter{Discussão}\label{cap:test}
 
-Após as implementações apresentadas no capítulo anterior, os grupos pré-definidos \textbf{Equipamentos e Serviços} e \textbf{Obras} passaram a apresentar a organização demonstrada nas Figuras \ref{equipamentos-e-servicos} e \ref{obras}. 
+Após as implementações apresentadas no capítulo anterior, o número total de grupos subiu para um total de 8, ver Figura \ref{todos-os-grupos}. Os grupos pré-definidos \textbf{Equipamentos e Serviços} e \textbf{Obras} passaram a apresentar a organização demonstrada nas Figuras \ref{equipamentos-e-servicos} e \ref{obras}. Cabe destacar que o grupo de Obras passou a integrar a ferrameta Capítulos por Obra, entretanto, Execução Orçamental foi movida para o grupo de Painéis. 
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.4\textwidth]{images/todos-os-grupos.png} 
+    \caption{Todos os Grupos - Versão Final} 
+    \label{todos-os-grupos}
+\end{figure}
 
 \begin{figure}[H]
     \centering 
@@ -32,7 +39,7 @@ O mesmo ocorre com os agrupamentos \textbf{Outros Custos} e \textbf{Recursos Hum
     \label{recursos-humanos}
 \end{figure}
 
-Os novos grupos \textbf{Amortizações Fiscais}, \textbf{Entidades} e \textbf{Parametrizações}, já mencionados no capítulo anterior, ficaram organizados como apresentado nas Figuras \ref{amortizacoes-fiscais}, \ref{entidades} e \ref{parametrizacoes}.
+Os novos grupos \textbf{Amortizações Fiscais}, \textbf{Entidades} e \textbf{Parametrizações}, já mencionados no capítulo anterior, ficaram organizados como apresentado nas Figuras \ref{amortizacoes-fiscais}, \ref{entidades} e \ref{parametrizacoes}. Destaque especial para ferramenta de Capítulo que agora integra o conjunto de Parametrizações.
 
 \begin{figure}[H]
     \centering 
@@ -55,4 +62,34 @@ Os novos grupos \textbf{Amortizações Fiscais}, \textbf{Entidades} e \textbf{Pa
     \label{parametrizacoes}
 \end{figure}
 
-Em relação aos testes de disponibilidade do sistema, registraram-se duas ocasiões em que o servidor ficou indisponível. A primeira ocorreu devido a uma atualização automática do \textit{Windows 11}, situação que não pode ser contornada pelos mecanismos de inicialização configurados no Sistema Operacional, exigindo intervenção humana. O segundo caso foi provocado pelo modo de hibernação automática do \textit{Windows 11}. Entretanto, essa situação pôde ser resolvida mediante ajustes nas configurações de energia da máquina.
+O novo grupo de Painéis, contém os Indicadores Globais, os Indicadores Específicos e a Execução Orçamental foi movida para este grupo pois faz sentido dispor no mesmo lugar todas as ferramentas de BI. Isso pode ser observado na Figura \ref{paineis}. As versões finais das ferramentas Indicadores Globais e Indicadores Específicos podem ser vistas nas Figuras \ref{indicadores-globais} e \ref{indicadores-especificos} respectivamente.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.4\textwidth]{images/paineis.png} 
+    \caption{Painéis - Versão Final} 
+    \label{paineis}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.4\textwidth]{images/indicadores-globais.png} 
+    \caption{Indicadores Globais - Versão Final} 
+    \label{indicadores-globais}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.4\textwidth]{images/paineis.png} 
+    \caption{Indicadores Específicos - Versão Final} 
+    \label{indicadores-especificos}
+\end{figure}
+
+Em relação aos testes de disponibilidade do sistema, registraram-se três ocasiões em que o servidor ficou indisponível. A primeira ocorreu devido a uma atualização automática do \textit{Windows 11}, situação que não pode ser contornada pelos mecanismos de inicialização configurados no Sistema Operacional, exigindo intervenção humana. O segundo caso foi provocado pelo modo de hibernação automática do \textit{Windows 11}. Entretanto, essa situação pôde ser resolvida mediante ajustes nas configurações de energia da máquina. Por fim o terceiro caso foi um erro inesperado do Docker, uma falha inesperada do Windows Subsystem for Linux (WSL) levou a interrupção do serviço, embora a reinicio da máquina foi suficiente para contornar o problema, ver Figura \ref{docker-crash}.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.4\textwidth]{images/docker-crash.png} 
+    \caption{Interrupção por erro do WSL} 
+    \label{docker-crash}
+\end{figure}
